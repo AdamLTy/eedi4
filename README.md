@@ -15,13 +15,13 @@ python src/gen/generate_train_72b_awq_100_example.py --seed ${SEED}
 ## 32B baseline
 ### Training
 ```
-for FOLD in {0..4}; do
+for FOLD in 0 1; do
     python src/exp/exp010_fold_${FOLD}.py
 done
 ```
 ### Inference for generated data
 ```
-for FOLD in {0..4}; do
+for FOLD in 0 1; do
     python src/exp/exp010_infer_gen_fold_${FOLD}.py
 done
 ```

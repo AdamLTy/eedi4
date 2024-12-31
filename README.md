@@ -26,7 +26,7 @@ for FOLD in {0..4}; do
 done
 ```
 The output candidates `results/exp/ex010_infer_gen_fold_${FOLD}/exp010_infer_gen_fold_${FOLD}_val_pred.parquet` are used for the reranker training.
-## 32B model used in the final submission
+## 32B model training used in the final submission
 ```
 for FOLD in 0 1; do
     python src/exp/exp012_fold_${FOLD}.py
@@ -34,7 +34,7 @@ done
 ```
 
 # Reranker training
-## training with the competition data and generated data
+## 32B model training with the competition data and generated data
 ```
 for FOLD in 0 1; do
     python src/exp/exp015_fold_${FOLD}.py
